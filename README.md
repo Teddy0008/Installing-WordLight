@@ -1,4 +1,5 @@
 
+
 # WordLight Installation Guide
 This is a guide on how to install WordLight on almost any Operating System
 
@@ -49,6 +50,83 @@ Since there are so many Linux Distributions, I only cover the base ones.
 	sudo ./install.sh
 	```
 3. Download and install WordLight
+	1. Download the installer from the [official WordLight website](https://revivalnsw.com.au/resources/wordlight/)
+	2. Open a terminal in the directory where you downloaded the installer and run this command:
+	```bash
+	wine64 WordLightSetup.exe
+	```
+	3. Follow the instructions 3-4 in the Windows installation guide
+### Fedora
+1. Install Wine
+	1. Refresh the repositories with this command:
+	```bash
+	sudo dnf upgrade --refresh
+	```
+	2. Install Wine with this command:
+	```bash
+	sudo dnf install wine
+	```
+3. Install the Segoe UI font
+	1. Install yay
+		1. Download the font file from [here](https://raw.githubusercontent.com/Teddy0008/Installing-WordLight/main/segoeui.ttf)
+		2. Make a TrueType Font folder
+		```bash
+		mkdir /usr/share/fonts/ttf
+		```
+		3. Open a terminal in the directory where you downloaded the font and copy the font to the ttf directory with this command:
+		```bash
+		cp segoeui.ttf /usr/share/fonts/ttf
+		```
+		4. Update the font cache
+		```bash
+		fc-cache -v
+		```
+4. Download and install WordLight
+	1. Download the installer from the [official WordLight website](https://revivalnsw.com.au/resources/wordlight/)
+	2. Open a terminal in the directory where you downloaded the installer and run this command:
+	```bash
+	wine64 WordLightSetup.exe
+	```
+	3. Follow the instructions 3-4 in the Windows installation guide
+### openSUSE
+1. Install Wine
+	1. Add the wine repository:
+		1. Download the repository key
+		```bash
+		wget https://download.opensuse.org/repositories/Emulators:/Wine/openSUSE_Tumbleweed/repodata/repomd.xml.key 
+		```
+		2. Install the key
+		```bash
+		sudo rpm --import repomd.xml.key
+		```
+		3. Add the repository
+		```bash
+		sudo zypper addrepo https://download.opensuse.org/repositories/Emulators:/Wine/openSUSE_Tumbleweed/Emulators:Wine.repo
+		```
+		4. Update the package database
+		```bash
+		sudo zypper refresh
+		```
+	2. Install Wine with this command:
+	```bash
+	sudo zypper install wine
+	```
+3. Install the Segoe UI font
+	1. Install yay
+		1. Download the font file from [here](https://raw.githubusercontent.com/Teddy0008/Installing-WordLight/main/segoeui.ttf)
+		2. Make a TrueType Font folder
+		```bash
+		mkdir /usr/share/fonts/ttf
+		```
+		3. Open a terminal in the directory where you downloaded the font and copy the font to the ttf directory with this command:
+		```bash
+		cp segoeui.ttf /usr/share/fonts/ttf
+		```
+		4. Update the font cache
+		```bash
+		fc-cache -v
+		```
+4. Download and install WordLight
 	1. Download the installer from the [official WordLight website](https://revivalnsw.com.au/resources/wordlight/)
 	2. Open a terminal in the directory where you downloaded the installer and run this command:
 	```bash
